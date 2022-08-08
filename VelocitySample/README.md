@@ -2,6 +2,9 @@ VelocitySample
 =========================
 
 ## Overview
+Sample Velocity chart for a team
+
+![image](https://user-images.githubusercontent.com/11684391/183494329-9bff1187-7738-4c80-a0cc-33c89607963c.png)
 
 
 ## License
