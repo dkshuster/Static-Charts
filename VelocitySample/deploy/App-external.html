@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VelocitySample</title>
+
+    <script type="text/javascript" src="https://rally1.rallydev.com/apps/2.1/sdk.js"></script>
+
+    <script type="text/javascript">
+        Rally.onReady(function () {
+                Ext.define("CustomApp",{extend:"Rally.app.App",componentCls:"app",launch:function(){Rally.onReady(function(){Ext.define("Rally.example.BareMetalChart",{extend:"Rally.app.App",launch:function(){this.add({xtype:"container",itemId:"FakeStats",margin:"auto",style:{align:"center"}}),Ext.ComponentQuery.query("container[itemId=FakeStats]")[0].update('<img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAABLCAYAAACGPXWeAAAEI0lEQVR42u3dP27UQBjG4T0ON0BwASQaKkTHARA3QIiSu9BxwqAUSFG043lnvrET7z6P9DXJ/om3yM92HM/lAQA4u18XnwEACDoAIOgAgKADAIIOAIIOAAg6ACDoAICgA4CgAwCCDgAI+g27XC67vsbj9/5P8hqtxyev8/QxTx/Xe27reZXPrfr9ljdf3xoTzccfX/yCQ9AFfc1rXItyL+YjX09+juS56euv/lxn3ufxF/X735+M6Y6gI+iCvnlk+/xrI0e2SUyToFfiOBP01ufQOrofOUswGnVBN4KOoFM+uk6PoFs7BjM7FOkp8d5jRn6Ga+FubXPymYy8vqAbQUfQ2fUI/Xlc9zo6Honqih2V3s7AiqBv7VAIuhF0BJ3Dj9CrR5lp0Ebee1XQ09eZDXplWwTdCDqCzpLw9Y5eK/Ha+zEzz10ddKfcjaAj6BwS9OTCruSCr97rj+w4zFxUNvsvb+k1AK2L4lpBd1GcEXQEHWcJbHcz6MYk8+77B79cEHRE3fYCCDoACDoAIOgAgKADAIIOAIIOAAg6ACDo92brrmwzr5W8T/Iao3eKS96rulLb6Dav+H6LG6YY83rm8W58ZxpBv+Ggr4pMdSGS3r3Nj76X+4qbvqxcw/150N3W1JjXc3vdb39/nmIE/c6DnhwpjxzZ9t5z5aptldXW0s+hdXQ/ey96QTdG0AWdJafceyuEja62tvXcVtDTU+uzUR49k2C1NWOMoAv6qY/Qe6uwzRxlVpcuXX16P9mRWLUeemuHQtCNEXRBZ/egp88/KugrHvsS66Gv/Hu9oBsj6IJOKegzp9xHL0irnJpeeVHc6qA75W6MoAs6h/4Nfesxydd675MGc+s9t/7WX/m3tfSzSncYXBRnjKALOs4W2G5BN0bQBR1Rv+XtdTMPY9xYxo1lAABBBwAEHQAEHQAQdABA0AEAQQcAQacivc1p5X/Ae7dNTZZWTW/PmqzCNnKXuWvfr25z+ph7+j/0E/wvLSDo5wr6yP3Nq0GfXSxlZMWz6mNWfxaro98K+j3fTUvQQdBF/aG/cEhyz/LeOuqVswUj66vvdXYiOTvQW8M9vQf+TNQFXdBB0AV9M+jJIiPpGt/pYyqLpYy+3+yZhN42W21N0EHQOTToq9b17gWtesScBHvm/ZLV4NIj+NGgz+xoCLqgg6Cza9DT7+8R9JH4pTsdMxfszQR9dEdD0AUdBJ2pQM6eOq6EayTclSvlXzroTrkLOgg6hwX9aaySiF/7G/u111/xN/Sti/CqF56lF9htXRTXCrqL4gQdBJ2739mw7YIu6CDoiPrNbrMbywg6CDoAIOgAgKADgKADAIIOAAg6ACDoACDoAICgAwCCDgAIOgAIOgAg6ACAoAMAgg4Agg4ACDoAIOgAQB70P8YYY4w59Xz+B7Nbymb0vNKbAAAAAElFTkSuQmCC">'),this.add({xtype:"rallychart",itemId:"mainchart",loadMask:!1,chartData:this._getMainChartData(),chartConfig:this._getMainChartConfig()})},_getMainChartData:function(){return{categories:["Iteration 4","Iteration 5","Iteration 6","Iteration 7","Iteration 8","Iteration 9"],series:[{name:"Accepted During Iteration",color:"rgb(58,135,79)",data:[48,50,52,54,52,0],index:3,legendIndex:1},{name:"Accepted After Iteration",color:"rgb(106,177,125)",data:[8,2,0,0,0,0],index:2,legendIndex:2},{name:"Not Accepted",color:"rgb(244,113,104)",data:[8,4,0,0,0,0],index:1,legendIndex:3},{name:"Trend",type:"line",data:[46,48,50,53,53,52],color:"#3a874f",showInLegend:!1}]}},_getMainChartConfig:function(){return{chart:{type:"column"},title:{text:""},exporting:{enabled:!0},xAxis:{title:{text:""}},yAxis:{stackLabels:{style:{color:"#000000"},enabled:!0},title:{text:"Points"}},plotOptions:{column:{stacking:"normal",dataLabels:{enabled:!1}}}}}}),Rally.launchApp("Rally.example.BareMetalChart",{name:"Velocity Sample"})})}});
+
+            Rally.launchApp('CustomApp', {
+                name:"VelocitySample",
+                parentRepos:"",
+                version:"0.1.1"
+            });
+
+        });
+    </script>
+
+
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+</body>
+</html>
