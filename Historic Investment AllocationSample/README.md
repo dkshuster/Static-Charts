@@ -3,6 +3,7 @@ HistoricInvestmentAllocation
 
 ## Overview
 
+![image](https://user-images.githubusercontent.com/11684391/183515308-ad05bc17-6999-487f-bd3a-1749647b9695.png)
 
 ## License
 
