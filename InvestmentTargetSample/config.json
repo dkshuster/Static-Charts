@@ -1,0 +1,14 @@
+{
+    "name": "InvestmentCategory",
+    "className": "CustomApp",
+    "server": "https://rally1.rallydev.com",
+    "sdk": "2.1",
+    "javascript": [
+        "App.js",
+        "https://code.highcharts.com/highcharts.js",
+        "https://code.highcharts.com/modules/exporting.js"
+    ],
+    "css": [
+        "app.css"
+    ]
+}

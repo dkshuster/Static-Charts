@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ProgramIncrementScopeChange</title>
+
+    <script type="text/javascript" src="/apps/2.1/sdk.js"></script>
+
+    <script type="text/javascript">
+        Rally.onReady(function () {
+                Ext.define("CustomApp",{extend:"Rally.app.App",componentCls:"app",launch:function(){Rally.onReady(function(){Ext.define("Rally.example.BareMetalChart",{extend:"Rally.app.App",launch:function(){this.add({xtype:"rallychart",loadMask:!1,chartData:this._getChartData(),chartConfig:this._getChartConfig(),chartColors:["#CCCCCC","#00a9e0","#009933","#CCCCCC","#00a9e0","#009933"]})},_getChartData:function(){return{series:[{name:"Baseline Scope",data:[3500,3550,4e3,4e3,4e3,5e3]},{name:"Baseline Scope In Progress",data:[2200,2275,2300,2400,2400,2550]},{name:"Baseline Scope Completed",data:[0,0,20,20,30,40]},{name:"Added Scope",data:[0,0,0,0,0]},{name:"Added Scope In Progress",data:[0,0,0,0,0,0]},{name:"Added Scope Completed",data:[0,0,0,0,0,0]}]}},_getChartConfig:function(){return{chart:{type:"column",xoomType:"xy"},title:{text:"PI Increment Scope Change"},exporting:{enabled:!0},xAxis:{title:{text:"Days"},min:1,max:90,plotLines:[{color:"#FF0000",width:2,value:6}]},yAxis:{stackLabels:{style:{color:"black"},enabled:!1},title:{text:"Points / Count"}},plotOptions:{column:{stacking:"normal",pointPadding:.1,groupPadding:0,dataLabels:{enabled:!1}}}}}}),Rally.launchApp("Rally.example.BareMetalChart",{name:"PI Incement Scope Change"})})}});
+
+            Rally.launchApp('CustomApp', {
+                name:"ProgramIncrementScopeChange",
+                parentRepos:"",
+                version:"0.1.1"
+            });
+
+        });
+    </script>
+
+
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+</body>
+</html>
