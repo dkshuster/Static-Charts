@@ -20,16 +20,16 @@ Ext.define('CustomApp', {
                  */
                 _getChartData: function() {
 
+                    // start increment 6 months prior to today and build list of 6 increments.  If more incements are added
+                    // you will need to add additional entries in all of the series data below.
                     var increments = 6;
                     var theDate = new Date();
-                    theDate.setDate( theDate.getDate() - ( increments * 30) );  // start increment 6 months prior
+                    theDate.setDate( theDate.getDate() - ( increments * 30) );   
                     var dates = [];
                     for(var i = 0; i < increments; i++) {
-                        console.log("I = " + i);
                         dates.push( new Date (theDate.setDate( theDate.getDate() + 30 )).toLocaleDateString() );
                     }
                     return {
-//                        categories: ['2021-11-15', '2021-12-15', '2022-01-15', '2022-02-15', '2022-03-15', '2022-04-15'],
                         categories: dates,
                         series: [{
                             name: 'Not Started',
