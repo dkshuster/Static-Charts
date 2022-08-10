@@ -2,7 +2,9 @@ CFDSample
 =========================
 
 ## Overview
-CFD chart showing the last 6 months auto calculated from todays date.
+CFD chart showing the last 6 months of the Implied Portfolio Item state.  The date increments auto calculated to start 6 months prior to todays date.
+
+
 ![image](https://user-images.githubusercontent.com/11684391/183958512-7e7523d3-964c-4ce1-bcd0-6a8cda4ef3be.png)
 
 
