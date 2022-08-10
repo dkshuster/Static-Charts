@@ -19,10 +19,18 @@ Ext.define('CustomApp', {
                  * Generate x axis categories and y axis series data for the chart
                  */
                 _getChartData: function() {
+                    // calculate and populate the previous 1 week intervals based on todays date.  If you change the number of increments
+                    // you will have to adjust the series values to match the number of increments.
+                    var increments = 24;
+                    var theDate = new Date();
+                    theDate.setDate( theDate.getDate() - (increments * 7) );  // start increments, 1 week increments ago
+                    var dates = [];
+                    for(var i = 0; i < increments; i++) {
+                        console.log("I = " + i);
+                        dates.push( new Date (theDate.setDate( theDate.getDate() + 7 )).toDateString() );
+                    }
                     return {
-                        categories: ['02/14','02/28','03/14','03/28','04/11','04/25','05/09','05/23',
-                                     '10/25','11/08','11/22','12/06','12/20','01/03','01/17','01/31',
-                                     '07/05','07/19','08/02','08/16','08/30','09/13','09/27','10/11'],
+                        categories : dates,
                         series: [{
                             name: 'Total Active',
                             color: "#000000",
@@ -84,12 +92,6 @@ Ext.define('CustomApp', {
                             },
                             opposite: true
                         }],
-//                        plotOptions: {
-//                            series: {
-//                                pointStart: Date.UTC(2022, 5, 16),
-//                                pointInterval: 24 * 3600 * 1000  // 2 weeks
-//                            }
-//                        }
                     };
                 }
             });
